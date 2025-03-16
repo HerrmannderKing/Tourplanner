@@ -2,10 +2,77 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
-    <ListView fx:id="tourList" />
-    <Button text="Add Tour" onAction="#handleAddTour" />
-    <Button text="Remove Tour" onAction="#handleRemoveTour" />
-</VBox>
+<AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhtw.tourplanner.controller.MainController">
+    <!-- Tour List and Details Section -->
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <!-- Tour List and Details -->
+        <HBox spacing="10">
+            <!-- Tour List -->
+            <VBox spacing="10" prefWidth="300">
+                <Label text="Tours" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+                <ListView fx:id="tourList" prefHeight="200" />
+            </VBox>
+
+            <!-- Tour Details -->
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <Label text="Tour Details" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+                <HBox spacing="5">
+                    <TextField fx:id="nameField" promptText="Name" prefWidth="150" HBox.hgrow="ALWAYS" />
+                    <TextField fx:id="descriptionField" promptText="Description" prefWidth="150" HBox.hgrow="ALWAYS" />
+                </HBox>
+                <HBox spacing="5">
+                    <TextField fx:id="fromField" promptText="From" prefWidth="150" HBox.hgrow="ALWAYS" />
+                    <TextField fx:id="toField" promptText="To" prefWidth="150" HBox.hgrow="ALWAYS" />
+                </HBox>
+                <HBox spacing="5">
+                    <TextField fx:id="transportTypeField" promptText="Transport Type" prefWidth="150" HBox.hgrow="ALWAYS" />
+                    <TextField fx:id="distanceField" promptText="Distance" prefWidth="150" HBox.hgrow="ALWAYS" />
+                </HBox>
+                <HBox spacing="5">
+                    <TextField fx:id="estimatedTimeField" promptText="Estimated Time" prefWidth="150" HBox.hgrow="ALWAYS" />
+                    <TextField fx:id="routeImageField" promptText="Route Image" prefWidth="150" HBox.hgrow="ALWAYS" />
+                </HBox>
+                <HBox spacing="5">
+                    <Button text="Add Tour" onAction="#handleAddTour" HBox.hgrow="ALWAYS" />
+                    <Button text="Edit Tour" onAction="#handleEditTour" HBox.hgrow="ALWAYS" />
+                    <Button text="Delete Tour" onAction="#handleDeleteTour" HBox.hgrow="ALWAYS" />
+                </HBox>
+            </VBox>
+
+            <!-- Map Placeholder -->
+            <VBox spacing="10" prefWidth="400">
+                <Label text="Map" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+                <ImageView fx:id="mapPlaceholder" fitWidth="400" fitHeight="300" />
+            </VBox>
+        </HBox>
+
+        <!-- Separator -->
+        <Separator />
+
+        <!-- Tour Logs Section -->
+        <VBox spacing="10">
+            <Label text="Tour Logs" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <ListView fx:id="tourLogList" prefHeight="150" VBox.vgrow="ALWAYS" />
+            <HBox spacing="5">
+                <TextField fx:id="logCommentField" promptText="Comment" prefWidth="150" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="logDifficultyField" promptText="Difficulty" prefWidth="100" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="logDistanceField" promptText="Distance" prefWidth="100" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="logTimeField" promptText="Time" prefWidth="100" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="logRatingField" promptText="Rating" prefWidth="100" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <HBox spacing="5">
+                <Button text="Add Log" onAction="#handleAddTourLog" HBox.hgrow="ALWAYS" />
+                <Button text="Edit Log" onAction="#handleEditTourLog" HBox.hgrow="ALWAYS" />
+                <Button text="Delete Log" onAction="#handleDeleteTourLog" HBox.hgrow="ALWAYS" />
+            </HBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

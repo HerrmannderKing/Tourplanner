@@ -1,4 +1,4 @@
-package controller;
+package at.fhtw.tourplanner.model;
 
 public class Tour {
     private String name;
@@ -73,5 +73,11 @@ public class Tour {
 
     public void setRouteImage(String routeImage) {
         this.routeImage = routeImage;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s | %s | %s | %s | %s | %.2f km | %s | %s",
+                name, description, from, to, transportType, distance, estimatedTime, routeImage);
     }
 }

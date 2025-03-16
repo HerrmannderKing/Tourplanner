@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b823016d-a4f6-4ca0-aac7-9d5f1c4ee496" name="Changes" comment="" />
+    <list default="true" id="b823016d-a4f6-4ca0-aac7-9d5f1c4ee496" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/UniTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/TourController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/TourLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/service/TourService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourLogViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/TourLogView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/TourLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/TourLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/viewModel/TourViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/MainView.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,23 +45,66 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2tqyn2EFJvDRBdIGDEYlTQiE9t5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TourPlanner [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TourPlanner [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tourplanner [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Roy Oishik der Boss/Downloads/swen2-25-main/swen2-25-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Roy Oishik der Boss\IdeaProjects\tourplanner\src\main\java\controller" />
+      <recent name="C:\Users\Roy Oishik der Boss\IdeaProjects\tourplanner\src\main\java\viewmodel" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="at.fhtw.tourplanner" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="at.fhtw.tourplanner.HelloApplication" />
+      <module name="tourplanner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.fhtw.tourplanner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -53,8 +121,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741094063824</updated>
-      <workItem from="1741094064900" duration="4000" />
+      <workItem from="1741094064900" duration="214000" />
+      <workItem from="1741095845950" duration="2411000" />
+      <workItem from="1741562254654" duration="1286000" />
+      <workItem from="1741563612037" duration="748000" />
+      <workItem from="1741564768585" duration="2026000" />
+      <workItem from="1741610545928" duration="38000" />
+      <workItem from="1741610926156" duration="2636000" />
+      <workItem from="1741694887478" duration="1466000" />
+      <workItem from="1741696406250" duration="45000" />
+      <workItem from="1741696530264" duration="2094000" />
+      <workItem from="1741950965144" duration="13388000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

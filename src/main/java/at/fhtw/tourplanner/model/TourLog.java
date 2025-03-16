@@ -1,4 +1,4 @@
-package controller;
+package at.fhtw.tourplanner.model;
 
 import java.time.LocalDateTime;
 
@@ -57,5 +57,11 @@ public class TourLog {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s | %s | Difficulty: %d | Distance: %.2f km | Time: %.2f h | Rating: %d",
+                dateTime, comment, difficulty, totalDistance, totalTime, rating);
     }
 }
