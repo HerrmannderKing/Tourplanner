@@ -77,11 +77,11 @@ public class MainController {
                 routeImageField.setText(newVal.getRouteImage());
 
                 // Lädt das Bild für die Karte
-                if (newVal.getRouteImage() != null && !newVal.getRouteImage().isEmpty()) {
+                /*if (newVal.getRouteImage() != null && !newVal.getRouteImage().isEmpty()) {
                     mapPlaceholder.setImage(new Image(newVal.getRouteImage()));
                 } else {
                     mapPlaceholder.setImage(null);
-                }
+                }*/
             }
         });
 
@@ -116,13 +116,43 @@ public class MainController {
     @FXML
     private void handleEditTour() {
         try {
-            // Bearbeitet die ausgewählte Tour
-            Tour updatedTour = createTourFromInput();
-            if (updatedTour != null) {
-                tourViewModel.editTour(updatedTour);
+            // Ensure the selected tour is not null
+            Tour selectedTour = tourViewModel.getSelectedTour();
+            if (selectedTour == null) {
+                showErrorAlert("Kein Tour ausgewählt", "Bitte wählen Sie eine Tour zum Bearbeiten aus.");
+                return;
             }
-        } catch (NumberFormatException e) {
-            showErrorAlert("Ungültige Eingabe", "Die Distanz muss eine Zahl sein.");
+
+            // Modify the selected tour directly with the data from the input fields
+            selectedTour.setName(nameField.getText());
+            selectedTour.setDescription(descriptionField.getText());
+            selectedTour.setFrom(fromField.getText());
+            selectedTour.setTo(toField.getText());
+            selectedTour.setTransportType(transportTypeField.getText());
+
+            // Validate and set the distance
+            try {
+                double distance = Double.parseDouble(distanceField.getText());
+                selectedTour.setDistance(distance);
+            } catch (NumberFormatException e) {
+                showErrorAlert("Ungültige Eingabe", "Die Distanz muss eine Zahl sein.");
+                return; // If invalid, exit the method.
+            }
+
+            // Set the estimated time
+            selectedTour.setEstimatedTime(estimatedTimeField.getText());
+
+            // Set the route image if it's not empty
+            selectedTour.setRouteImage(routeImageField.getText());
+
+            // Update the list of tours by calling the ViewModel's updateTour method
+            tourViewModel.updateTour(selectedTour);  // This updates the tour in the list
+
+            // Optionally, clear the input fields
+            clearTourInputFields();
+
+        } catch (Exception e) {
+            showErrorAlert("Fehler", "Es gab einen Fehler beim Bearbeiten der Tour.");
         }
     }
 

@@ -26,6 +26,7 @@ public class TourViewModel {
 
     public void editTour(Tour updatedTour) {
         if (selectedTour != null) {
+            // Update the properties of the selectedTour object directly
             selectedTour.setName(updatedTour.getName());
             selectedTour.setDescription(updatedTour.getDescription());
             selectedTour.setFrom(updatedTour.getFrom());
@@ -36,6 +37,16 @@ public class TourViewModel {
             selectedTour.setRouteImage(updatedTour.getRouteImage());
         }
     }
+    public void updateTour(Tour updatedTour) {
+        if (updatedTour != null) {
+            // Find the tour in the list and update it
+            int index = tours.indexOf(updatedTour);
+            if (index >= 0) {
+                tours.set(index, updatedTour);  // Update the list with the modified tour
+            }
+        }
+    }
+
 
     public void deleteTour() {
         if (selectedTour != null) {

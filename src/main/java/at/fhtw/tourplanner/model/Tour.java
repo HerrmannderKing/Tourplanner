@@ -1,83 +1,125 @@
 package at.fhtw.tourplanner.model;
 
-public class Tour {
-    private String name;
-    private String description;
-    private String from;
-    private String to;
-    private String transportType;
-    private double distance;
-    private String estimatedTime;
-    private String routeImage;
+import javafx.beans.property.*;
 
-    // Getter und Setter
+public class Tour {
+    private final StringProperty name = new SimpleStringProperty();
+    private final StringProperty description = new SimpleStringProperty();
+    private final StringProperty from = new SimpleStringProperty();
+    private final StringProperty to = new SimpleStringProperty();
+    private final StringProperty transportType = new SimpleStringProperty();
+    private final DoubleProperty distance = new SimpleDoubleProperty();
+    private final StringProperty estimatedTime = new SimpleStringProperty();
+    private final StringProperty routeImage = new SimpleStringProperty();
+
+    // Getter and Setter for Name
     public String getName() {
-        return name;
+        return name.get();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name.set(name);
     }
 
+    public StringProperty nameProperty() {
+        return name;
+    }
+
+    // Getter and Setter for Description
     public String getDescription() {
-        return description;
+        return description.get();
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description.set(description);
     }
 
+    public StringProperty descriptionProperty() {
+        return description;
+    }
+
+    // Getter and Setter for From
     public String getFrom() {
-        return from;
+        return from.get();
     }
 
     public void setFrom(String from) {
-        this.from = from;
+        this.from.set(from);
     }
 
+    public StringProperty fromProperty() {
+        return from;
+    }
+
+    // Getter and Setter for To
     public String getTo() {
-        return to;
+        return to.get();
     }
 
     public void setTo(String to) {
-        this.to = to;
+        this.to.set(to);
     }
 
+    public StringProperty toProperty() {
+        return to;
+    }
+
+    // Getter and Setter for TransportType
     public String getTransportType() {
-        return transportType;
+        return transportType.get();
     }
 
     public void setTransportType(String transportType) {
-        this.transportType = transportType;
+        this.transportType.set(transportType);
     }
 
+    public StringProperty transportTypeProperty() {
+        return transportType;
+    }
+
+    // Getter and Setter for Distance
     public double getDistance() {
-        return distance;
+        return distance.get();
     }
 
     public void setDistance(double distance) {
-        this.distance = distance;
+        this.distance.set(distance);
     }
 
+    public DoubleProperty distanceProperty() {
+        return distance;
+    }
+
+    // Getter and Setter for EstimatedTime
     public String getEstimatedTime() {
-        return estimatedTime;
+        return estimatedTime.get();
     }
 
     public void setEstimatedTime(String estimatedTime) {
-        this.estimatedTime = estimatedTime;
+        this.estimatedTime.set(estimatedTime);
     }
 
+    public StringProperty estimatedTimeProperty() {
+        return estimatedTime;
+    }
+
+    // Getter and Setter for RouteImage
     public String getRouteImage() {
-        return routeImage;
+        return routeImage.get();
     }
 
     public void setRouteImage(String routeImage) {
-        this.routeImage = routeImage;
+        this.routeImage.set(routeImage);
+    }
+
+    public StringProperty routeImageProperty() {
+        return routeImage;
     }
 
     @Override
     public String toString() {
         return String.format("%s | %s | %s | %s | %s | %.2f km | %s | %s",
-                name, description, from, to, transportType, distance, estimatedTime, routeImage);
+                name.get(), description.get(), from.get(), to.get(), transportType.get(),
+                distance.get(), estimatedTime.get(), routeImage.get());
     }
 }

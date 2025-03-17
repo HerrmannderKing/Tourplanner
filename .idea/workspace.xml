@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b823016d-a4f6-4ca0-aac7-9d5f1c4ee496" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/UniTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/TourController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/TourLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/service/TourService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourLogViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/TourLogView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/Tour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TourLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/TourLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/viewModel/TourViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;darkodzolev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HerrmannderKing/Tourplanner.git&quot;,
+    &quot;accountId&quot;: &quot;d8a099ca-8519-4083-b6f2-b7d49d6878a2&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -64,10 +64,11 @@
     &quot;Maven.TourPlanner [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.tourplanner [clean,compile].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Roy Oishik der Boss/Downloads/swen2-25-main/swen2-25-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/darkodzolev/Desktop/Tourplanner&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,7 +89,7 @@
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="at.fhtw.tourplanner.HelloApplication" />
-      <module name="tourplanner" />
+      <module name="TourPlanner" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="at.fhtw.tourplanner.*" />
@@ -108,8 +109,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
       </set>
     </attachedChunks>
   </component>
@@ -132,6 +133,8 @@
       <workItem from="1741696406250" duration="45000" />
       <workItem from="1741696530264" duration="2094000" />
       <workItem from="1741950965144" duration="13388000" />
+      <workItem from="1742167126448" duration="800000" />
+      <workItem from="1742239414962" duration="2172000" />
     </task>
     <servers />
   </component>
