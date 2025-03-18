@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" spacing="10">
+    <Label text="Tour Details" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+    <HBox spacing="5">
+        <TextField fx:id="nameField" promptText="Name" prefWidth="150" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="descriptionField" promptText="Description" prefWidth="150" HBox.hgrow="ALWAYS" />
+    </HBox>
+    <HBox spacing="5">
+        <TextField fx:id="fromField" promptText="From" prefWidth="150" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="toField" promptText="To" prefWidth="150" HBox.hgrow="ALWAYS" />
+    </HBox>
+    <HBox spacing="5">
+        <TextField fx:id="transportTypeField" promptText="Transport Type" prefWidth="150" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="distanceField" promptText="Distance" prefWidth="150" HBox.hgrow="ALWAYS" />
+    </HBox>
+    <HBox spacing="5">
+        <TextField fx:id="estimatedTimeField" promptText="Estimated Time" prefWidth="150" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="routeImageField" promptText="Route Image" prefWidth="150" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>

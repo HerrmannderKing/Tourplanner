@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhtw.tourplanner.controller.MainController" spacing="10">
+    <Label text="Tour Logs" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+    <ListView fx:id="tourLogList" prefHeight="150" VBox.vgrow="ALWAYS" />
+    <HBox spacing="5">
+        <TextField fx:id="logCommentField" promptText="Comment" prefWidth="150" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="logDifficultyField" promptText="Difficulty" prefWidth="100" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="logDistanceField" promptText="Distance" prefWidth="100" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="logTimeField" promptText="Time" prefWidth="100" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="logRatingField" promptText="Rating" prefWidth="100" HBox.hgrow="ALWAYS" />
+    </HBox>
+    <HBox spacing="5">
+        <Button text="Add Log" onAction="#handleAddTourLog" HBox.hgrow="ALWAYS" />
+        <Button text="Edit Log" onAction="#handleEditTourLog" HBox.hgrow="ALWAYS" />
+        <Button text="Delete Log" onAction="#handleDeleteTourLog" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>

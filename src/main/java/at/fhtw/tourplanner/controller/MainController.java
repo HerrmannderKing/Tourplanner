@@ -56,17 +56,16 @@ public class MainController {
 
     @FXML
     public void initialize() {
-        // Bindet die Tour-Liste an die ListView
+        // Bindet die TourListe an die ListView
         tourList.setItems(tourViewModel.getTours());
 
-        // Bindet die Tour-Log-Liste an die ListView
+        // Bindet die TourLogListe an die ListView
         tourLogList.setItems(tourLogViewModel.getTourLogs());
 
-        // Listener für die Auswahl einer Tour
         tourList.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             tourViewModel.setSelectedTour(newVal);
             if (newVal != null) {
-                // Füllt die Felder mit den Daten der ausgewählten Tour
+                // Füllt die Felder mit den Daten der Tour
                 nameField.setText(newVal.getName());
                 descriptionField.setText(newVal.getDescription());
                 fromField.setText(newVal.getFrom());
@@ -80,7 +79,6 @@ public class MainController {
             }
         });
 
-        // Listener für die Auswahl eines Tour-Logs
         tourLogList.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             tourLogViewModel.setSelectedTourLog(newVal);
             if (newVal != null) {
@@ -301,7 +299,7 @@ public class MainController {
     }
 
     private TourLog createTourLogFromInput() throws NumberFormatException {
-        // Überprüft, ob alle Felder ausgefüllt sind
+        // schaut ob alle Felder ausgefüllt sind
         if (logCommentField.getText().isEmpty() || logDifficultyField.getText().isEmpty() ||
                 logDistanceField.getText().isEmpty() || logTimeField.getText().isEmpty() ||
                 logRatingField.getText().isEmpty()) {
@@ -309,7 +307,7 @@ public class MainController {
             return null;
         }
 
-        // Versucht, die Eingaben in Zahlen umzuwandeln
+        //probiert die Eingaben in Zahlen umzuwandeln
         int difficulty;
         double totalDistance;
         double totalTime;
@@ -325,7 +323,7 @@ public class MainController {
 
         Tour selectedTour = tourViewModel.getSelectedTour();
 
-        // Erstellt ein neues Tour-Log aus den Eingabefeldern
+        //macht ein neues TourLog aus den Eingabefeldern
         TourLog tourLog = new TourLog(selectedTour);
         tourLog.setDateTime(LocalDateTime.now());
         tourLog.setComment(logCommentField.getText());
@@ -338,7 +336,7 @@ public class MainController {
     }
 
     private void clearTourInputFields() {
-        // Leert die Eingabefelder für Touren
+        // macht die Eingabefelder für Touren leer
         nameField.clear();
         descriptionField.clear();
         fromField.clear();
@@ -350,7 +348,6 @@ public class MainController {
     }
 
     private void clearTourLogInputFields() {
-        // Leert die Eingabefelder für Tour-Logs
         logCommentField.clear();
         logDifficultyField.clear();
         logDistanceField.clear();
@@ -359,7 +356,6 @@ public class MainController {
     }
 
     private void showErrorAlert(String title, String message) {
-        // Zeigt eine Fehlermeldung an
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle(title);
         alert.setHeaderText(null);

@@ -11,7 +11,6 @@ public class TourLog {
     private double totalTime;
     private int rating;
 
-    // Getter und Setter
     public TourLog(Tour associatedTour) {
         this.associatedTour = associatedTour;
         this.dateTime = LocalDateTime.now();

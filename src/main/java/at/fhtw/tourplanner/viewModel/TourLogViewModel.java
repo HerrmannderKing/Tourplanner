@@ -35,7 +35,6 @@ public class TourLogViewModel {
 
     public void updateTourLogs() {
         if (selectedTour != null) {
-            // Fetch the logs for the selected tour
             tourLogs.setAll(selectedTour.getTourLogs());
         } else {
             tourLogs.clear();
@@ -43,7 +42,6 @@ public class TourLogViewModel {
     }
 
     private List<TourLog> getLogsForTour(Tour tour) {
-        // Replace this with your logic to fetch logs for the given tour
         return new ArrayList<>();
     }
 
@@ -71,8 +69,9 @@ public class TourLogViewModel {
 
     public void deleteTourLog(TourLog tourLog) {
         if (tourLog != null && selectedTour != null) {
-            selectedTour.removeTourLog(tourLog);
-            updateTourLogs();
+            selectedTour.removeTourLog(tourLog); // Entfernt das Log aus der Tour
+            tourLogs.remove(tourLog); // Entfernt das Log aus der ObservableList
+            setSelectedTourLog(null); // Setzt selectedTourLog auf null
         }
     }
 }

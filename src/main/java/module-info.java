@@ -1,6 +1,8 @@
 module at.fhtw.tourplanner {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.testng;
+    requires junit;
 
     // Öffnet die Pakete für JavaFX
     opens at.fhtw.tourplanner.controller to javafx.fxml;
@@ -13,4 +15,6 @@ module at.fhtw.tourplanner {
     exports at.fhtw.tourplanner.controller;
     exports at.fhtw.tourplanner.model;
     exports at.fhtw.tourplanner.viewModel;
+    exports Test;
+    opens Test to javafx.base;
 }
