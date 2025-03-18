@@ -3,6 +3,7 @@ package at.fhtw.tourplanner.model;
 import java.time.LocalDateTime;
 
 public class TourLog {
+    private Tour associatedTour;
     private LocalDateTime dateTime;
     private String comment;
     private int difficulty;
@@ -11,6 +12,19 @@ public class TourLog {
     private int rating;
 
     // Getter und Setter
+    public TourLog(Tour associatedTour) {
+        this.associatedTour = associatedTour;
+        this.dateTime = LocalDateTime.now();
+    }
+
+    public Tour getAssociatedTour() {
+        return associatedTour;
+    }
+
+    public void setAssociatedTour(Tour associatedTour) {
+        this.associatedTour = associatedTour;
+    }
+
     public LocalDateTime getDateTime() {
         return dateTime;
     }

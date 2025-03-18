@@ -47,7 +47,6 @@ public class TourViewModel {
         }
     }
 
-
     public void deleteTour() {
         if (selectedTour != null) {
             tours.remove(selectedTour);

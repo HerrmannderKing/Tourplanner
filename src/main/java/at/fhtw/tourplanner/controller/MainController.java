@@ -76,12 +76,7 @@ public class MainController {
                 estimatedTimeField.setText(newVal.getEstimatedTime());
                 routeImageField.setText(newVal.getRouteImage());
 
-                // Lädt das Bild für die Karte
-                /*if (newVal.getRouteImage() != null && !newVal.getRouteImage().isEmpty()) {
-                    mapPlaceholder.setImage(new Image(newVal.getRouteImage()));
-                } else {
-                    mapPlaceholder.setImage(null);
-                }*/
+                tourLogViewModel.setSelectedTour(newVal);
             }
         });
 
@@ -165,13 +160,37 @@ public class MainController {
 
     @FXML
     private void handleAddTourLog() {
+        Tour selectedTour = tourViewModel.getSelectedTour();
+        if (selectedTour == null) {
+            showErrorAlert("Fehlende Tour", "Bitte wählen Sie zuerst eine Tour aus.");
+            return;
+        }
+
         try {
-            // Erstellt ein neues Tour-Log und fügt es hinzu
-            TourLog newTourLog = createTourLogFromInput();
-            if (newTourLog != null) {
-                tourLogViewModel.addTourLog(newTourLog);
-                clearTourLogInputFields();
-            }
+            // Retrieve data from the input fields
+            String comment = logCommentField.getText();
+            int difficulty = Integer.parseInt(logDifficultyField.getText());
+            double totalDistance = Double.parseDouble(logDistanceField.getText());
+            double totalTime = Double.parseDouble(logTimeField.getText());
+            int rating = Integer.parseInt(logRatingField.getText());
+
+            // Create the new TourLog with the user input
+            TourLog newTourLog = new TourLog(selectedTour);
+            newTourLog.setDateTime(LocalDateTime.now());
+            newTourLog.setComment(comment);
+            newTourLog.setDifficulty(difficulty);
+            newTourLog.setTotalDistance(totalDistance);
+            newTourLog.setTotalTime(totalTime);
+            newTourLog.setRating(rating);
+
+            // Add the TourLog to the selected tour
+            selectedTour.addTourLog(newTourLog);
+
+            // Update the TourLogViewModel to reflect the added log
+            tourLogViewModel.updateTourLogs();
+
+            // Clear the input fields
+            clearTourLogInputFields();
         } catch (NumberFormatException e) {
             showErrorAlert("Ungültige Eingabe", "Schwierigkeit, Distanz, Zeit und Bewertung müssen Zahlen sein.");
         }
@@ -180,21 +199,73 @@ public class MainController {
     @FXML
     private void handleEditTourLog() {
         try {
-            // Bearbeitet das ausgewählte Tour-Log
-            TourLog updatedTourLog = createTourLogFromInput();
-            if (updatedTourLog != null) {
-                tourLogViewModel.editTourLog(updatedTourLog);
+            // Ensure the selected tour log is not null
+            TourLog selectedTourLog = tourLogViewModel.getSelectedTourLog();
+            if (selectedTourLog == null) {
+                showErrorAlert("Kein Tour-Log ausgewählt", "Bitte wählen Sie ein Tour-Log zum Bearbeiten aus.");
+                return;
             }
-        } catch (NumberFormatException e) {
-            showErrorAlert("Ungültige Eingabe", "Schwierigkeit, Distanz, Zeit und Bewertung müssen Zahlen sein.");
+
+            // Modify the selected tour log directly with the data from the input fields
+            selectedTourLog.setComment(logCommentField.getText());
+
+            // Validate and set the difficulty
+            try {
+                int difficulty = Integer.parseInt(logDifficultyField.getText());
+                selectedTourLog.setDifficulty(difficulty);
+            } catch (NumberFormatException e) {
+                showErrorAlert("Ungültige Eingabe", "Die Schwierigkeit muss eine Zahl sein.");
+                return; // If invalid, exit the method.
+            }
+
+            // Validate and set the total distance
+            try {
+                double totalDistance = Double.parseDouble(logDistanceField.getText());
+                selectedTourLog.setTotalDistance(totalDistance);
+            } catch (NumberFormatException e) {
+                showErrorAlert("Ungültige Eingabe", "Die Distanz muss eine Zahl sein.");
+                return; // If invalid, exit the method.
+            }
+
+            // Validate and set the total time
+            try {
+                double totalTime = Double.parseDouble(logTimeField.getText());
+                selectedTourLog.setTotalTime(totalTime);
+            } catch (NumberFormatException e) {
+                showErrorAlert("Ungültige Eingabe", "Die Zeit muss eine Zahl sein.");
+                return; // If invalid, exit the method.
+            }
+
+            // Validate and set the rating
+            try {
+                int rating = Integer.parseInt(logRatingField.getText());
+                selectedTourLog.setRating(rating);
+            } catch (NumberFormatException e) {
+                showErrorAlert("Ungültige Eingabe", "Die Bewertung muss eine Zahl sein.");
+                return; // If invalid, exit the method.
+            }
+
+            // Update the list of tour logs by calling the ViewModel's updateTourLogs method
+            tourLogViewModel.updateTourLogs();  // This updates the tour logs list
+
+            // Optionally, clear the input fields
+            clearTourLogInputFields();
+
+        } catch (Exception e) {
+            showErrorAlert("Fehler", "Es gab einen Fehler beim Bearbeiten des Tour-Logs.");
         }
     }
 
     @FXML
     private void handleDeleteTourLog() {
         // Löscht das ausgewählte Tour-Log
-        tourLogViewModel.deleteTourLog();
-        clearTourLogInputFields();
+        TourLog selectedTourLog = tourLogViewModel.getSelectedTourLog();  // Use the method to get selectedTourLog
+        if (selectedTourLog != null) {
+            tourLogViewModel.deleteTourLog(selectedTourLog);
+            clearTourLogInputFields();
+        } else {
+            showErrorAlert("Kein Log ausgewählt", "Bitte wählen Sie ein Tour-Log zum Löschen aus.");
+        }
     }
 
     private Tour createTourFromInput() throws NumberFormatException {
@@ -252,8 +323,10 @@ public class MainController {
             throw new NumberFormatException("Ungültige Eingabe");
         }
 
+        Tour selectedTour = tourViewModel.getSelectedTour();
+
         // Erstellt ein neues Tour-Log aus den Eingabefeldern
-        TourLog tourLog = new TourLog();
+        TourLog tourLog = new TourLog(selectedTour);
         tourLog.setDateTime(LocalDateTime.now());
         tourLog.setComment(logCommentField.getText());
         tourLog.setDifficulty(difficulty);

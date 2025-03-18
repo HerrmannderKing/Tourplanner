@@ -13,5 +13,4 @@ module at.fhtw.tourplanner {
     exports at.fhtw.tourplanner.controller;
     exports at.fhtw.tourplanner.model;
     exports at.fhtw.tourplanner.viewModel;
-    exports at.fhtw.tourplanner.service;
 }

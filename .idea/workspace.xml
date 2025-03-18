@@ -7,8 +7,15 @@
     <list default="true" id="b823016d-a4f6-4ca0-aac7-9d5f1c4ee496" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/TourController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/controller/TourLogController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/TourLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/model/TourLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/service/TourService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourLogViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourLogViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/tourplanner/viewModel/TourViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/at/fhtw/tourplanner/TourLogView.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +142,8 @@
       <workItem from="1741950965144" duration="13388000" />
       <workItem from="1742167126448" duration="800000" />
       <workItem from="1742239414962" duration="2172000" />
+      <workItem from="1742241924204" duration="889000" />
+      <workItem from="1742304811796" duration="12702000" />
     </task>
     <servers />
   </component>
